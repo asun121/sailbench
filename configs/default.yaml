@@ -1,0 +1,14 @@
+simulation:
+  dt:       0.02
+  t_final:  20.0
+
+boat:
+  m:        500
+  Iz:       2000
+  au:       100
+  av:       200
+  ar:       500
+
+environment:
+  wind_speed:   5.0
+  wind_dir_deg: 0.0
