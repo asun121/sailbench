@@ -1,14 +1,14 @@
 simulation:
-  dt:       0.02
-  t_final:  20.0
+  dt:       0.02      # s
+  t_final:  20.0      # s
 
 boat:
-  m:        500
-  Iz:       2000
-  au:       100
+  m:        500       # kg
+  Iz:       2000      # kg·m²
+  au:       100       # N/(m/s)
   av:       200
   ar:       500
 
 environment:
-  wind_speed:   5.0
+  wind_speed:   5.0   # m/s  (unused in POC)
   wind_dir_deg: 0.0

@@ -1,10 +1,13 @@
 import numpy as np
-from .base import HydroModel
+from sailbench.dynamics.base_hydro import HydroModel
 
 class LinearDragModel(HydroModel):
+    """Simple −a·u, −a·v, −a·r linear drag."""
+
     def compute(self, state, inputs, env, params):
         u, v, r = state[0], state[1], state[2]
-        Xh = -params['au'] * u
-        Yh = -params['av'] * v
-        Nh = -params['ar'] * r
-        return np.array([Xh, Yh, Nh])
+        return np.array([
+            -params['au'] * u,
+            -params['av'] * v,
+            -params['ar'] * r
+        ])
