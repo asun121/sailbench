@@ -1,6 +1,6 @@
 import numpy as np
 
-def rk4_step(f, t, state, dt, *args):
+def rk4_step(f, state, dt, *args):
     k1 = f(state, *args)
     k2 = f(state + dt*k1/2, *args)
     k3 = f(state + dt*k2/2, *args)
