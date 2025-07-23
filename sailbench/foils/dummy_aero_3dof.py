@@ -1,7 +1,7 @@
 import numpy as np
-from sailbench.aero.base_aero import AeroModel
+from sailbench.foils.base_foil import FoilModel
 
-class DummyAeroModel(AeroModel):
+class DummyAeroModel(FoilModel):
     """Constant forward thrust proportional to sail trim."""
 
     def compute(self, state, inputs, env, params):

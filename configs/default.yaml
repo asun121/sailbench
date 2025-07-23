@@ -9,6 +9,17 @@ boat:
   av:       200
   ar:       500
 
+rudder:
+  rho_water: 1025
+  S_r:       0.35       # rudder planform area (m^2)
+  CLa_r:     5.5        # lift curve slope per rad (≈2π * efficiency)
+  CD0_r:     0.02
+  k_ind_r:   0.9        # induced drag factor
+  x_r:      -1.2        # longitudinal position of rudder (m) (aft negative)
+  delta_max_deg: 30
+  stall_deg: 20
+
+
 environment:
   wind_speed:   5.0   # m/s  (unused in POC)
   wind_dir_deg: 0.0

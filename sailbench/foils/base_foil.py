@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 import numpy as np
 
-class AeroModel(ABC):
-    """Interface for sail / rudder force models."""
+class FoilModel(ABC):
+    """Interface for sail, rudder and keel foil models."""
 
     @abstractmethod
     def compute(self, state: np.ndarray,

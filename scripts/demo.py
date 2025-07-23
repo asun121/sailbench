@@ -1,15 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 from sailbench.sim.sim_runner_3dof import SimulationRunner
 
 
 runner = SimulationRunner('configs/default.yaml')
-inputs = {'delta_sail': 0.3, 'delta_rudder': 0.0}   # fixed cmds
+inputs = {'delta_sail': 0.1, 'delta_rudder': 0.0}   # fixed cmds
 t, hist = runner.run(inputs)
 
 x, y, psi = hist[:,3], hist[:,4], hist[:,5]

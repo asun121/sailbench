@@ -1,7 +1,7 @@
 import numpy as np, yaml
 from sailbench.solvers.rk4 import rk4_step
 from sailbench.dynamics.linear_drag_hydro_3dof import LinearDragModel
-from sailbench.aero.dummy_aero_3dof import DummyAeroModel
+from sailbench.foils.dummy_aero_3dof import DummyAeroModel
 
 class SimulationRunner:
     def __init__(self, cfg_path):
@@ -10,8 +10,8 @@ class SimulationRunner:
         self.dt   = cfg['simulation']['dt']
         self.T    = cfg['simulation']['t_final']
         self.prm  = cfg['boat']
-        self.hydro = LinearDragModel()   # ‹-- inherits HydroModel
-        self.aero  = DummyAeroModel()    # ‹-- inherits AeroModel
+        self.hydro = LinearDragModel()
+        self.aero  = DummyAeroModel()
 
     # ------------- ODE -------------
     def _deriv(self, state, inputs):
